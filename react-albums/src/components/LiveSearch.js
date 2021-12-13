@@ -13,7 +13,7 @@ export default function LiveSearch(props) {
     axios.get(testUrl)
       .then(res => setResults([...res.data.results]))
       .catch(err => console.log(err))
-  })
+  }, [term])
 
   return (
     <Fragment>
