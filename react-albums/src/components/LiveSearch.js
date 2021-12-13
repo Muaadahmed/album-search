@@ -9,7 +9,7 @@ export default function LiveSearch(props) {
   const [term, setTerm] = useState("");
   const [results, setResults] = useState([]);
   useEffect(() => {
-    const testUrl = 'https://itunes.apple.com/search?term=beatles&country=CA&media=music&entity=album&attribute=artistTerm';
+    const testUrl = `https://itunes.apple.com/search?term=${term}&country=CA&media=music&entity=album&attribute=artistTerm`;
     axios.get(testUrl)
       .then(res => console.log(res.data.results))
       .catch(err => console.log(err))
